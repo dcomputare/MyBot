@@ -8,3 +8,4 @@ else
 {
     argument0.team = TEAM_BLUE
 }
+return argument0.team

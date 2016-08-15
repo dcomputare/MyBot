@@ -7,7 +7,6 @@ with mybot
 }
 mybot.team = GetMyBotTeam(mybot)
 mybot.class = GetMyBotClass(mybot)
-
 if global.mybotNamePrefix == ""
 {
     mybot.name = "My Bot "+string(global.mybotNameCounter)

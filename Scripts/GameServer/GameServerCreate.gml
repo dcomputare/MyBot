@@ -73,6 +73,10 @@
     {
         CreateBot()
     }
+    while instance_number(MyPlayer) < global.mybotNumber
+    {
+        CreateMyBot()
+    }
     
     if(HAXXY_PUBLIC_KEY==md5(global.haxxyKey))
         global.myself.isHaxxyWinner = true;

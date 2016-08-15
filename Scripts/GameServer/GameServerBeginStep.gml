@@ -246,3 +246,4 @@ for(i=1; i<ds_list_size(global.players); i+=1)
     socket_send(player.socket);
 }
 buffer_clear(global.eventBuffer);
+

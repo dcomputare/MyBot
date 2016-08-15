@@ -1,5 +1,5 @@
 var noOfPlayers;
-noOfPlayers = ds_list_size(global.players)-instance_number(BotPlayer);
+noOfPlayers = ds_list_size(global.players)-instance_number(BotPlayer)-instance_number(MyPlayer);
 if(global.dedicatedMode)
     noOfPlayers -= 1;
 
@@ -15,6 +15,7 @@ write_ushort(lobbyBuffer, global.hostingPort);
 write_ushort(lobbyBuffer, global.playerLimit);
 write_ushort(lobbyBuffer, noOfPlayers);
 write_ushort(lobbyBuffer, instance_number(BotPlayer)); // Number of bots
+write_ushort(lobbyBuffer, instance_number(MyPlayer)); // Number of mybots
 if(global.serverPassword != "")
     write_ushort(lobbyBuffer, 1);
 else
