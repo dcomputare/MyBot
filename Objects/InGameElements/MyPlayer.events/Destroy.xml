@@ -13,35 +13,14 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">if(global.useLobbyServer) {
-    sendLobbyUnreg();
-}
-
-ds_list_destroy(global.players);
-socket_destroy(global.tcpListener);
-socket_destroy(global.serverSocket);
-buffer_destroy(serverId);
-
-if global.changedNodeMap
-{
-    writeNodesToFile()
-}
-with(Player)
-    instance_destroy();
-
-with (BotPlayer)
-instance_destroy();
-
-with (MyPlayer)
-	instance_destroy();
-
-with(JoiningPlayer)
-    instance_destroy();
+        <argument kind="STRING">    if(object != -1) with(object) instance_destroy();
     
-with(PlayerControl)
-    instance_destroy();
-
-room_goto_fix(Menu);
+    with(Rocket) if(ownerPlayer == other.id) instance_destroy();
+    with(Flame) if(ownerPlayer == other.id) instance_destroy();
+    with(Shot) if(ownerPlayer == other.id) instance_destroy();
+    with(Needle) if(ownerPlayer == other.id) instance_destroy();
+    with(Sentry) if(ownerPlayer == other.id) instance_destroy();
+    with(DeathCam) if(killedby == other.id) instance_destroy();
 </argument>
       </arguments>
     </action>

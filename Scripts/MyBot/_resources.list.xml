@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="MyBotInit" type="RESOURCE"/>
+  <resource name="CreateMyBot" type="RESOURCE"/>
+  <resource name="GetMyBotTeam" type="RESOURCE"/>
+  <resource name="GetMyBotClass" type="RESOURCE"/>
+</resources>

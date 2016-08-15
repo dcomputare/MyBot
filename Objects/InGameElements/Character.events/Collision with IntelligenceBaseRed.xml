@@ -23,6 +23,10 @@
         {
             with player BotInit()
         }
+        if player.object_index == MyPlayer
+        {
+            with player MyBotInit()
+        }
     }
 }
 </argument>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-  <resource name="BotInit" type="RESOURCE"/>
   <resource name="getBotInput" type="RESOURCE"/>
   <resource name="AI" type="GROUP"/>
   <resource name="CreateBot" type="RESOURCE"/>
@@ -9,4 +8,5 @@
   <resource name="LoadBotNodes" type="RESOURCE"/>
   <resource name="writeNodesToFile" type="RESOURCE"/>
   <resource name="GenerateNodes" type="RESOURCE"/>
+  <resource name="BotInit" type="RESOURCE"/>
 </resources>

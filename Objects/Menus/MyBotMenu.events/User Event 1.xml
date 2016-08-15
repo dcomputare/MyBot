@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<event category="COLLISION" with="IntelligenceBaseBlue">
+<event category="OTHER" id="11">
   <actions>
     <action id="603" library="1">
       <!--action name: Code-->
@@ -13,21 +13,19 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">if(global.isHost) {
-    if(team == TEAM_BLUE and intel == true) {
-        sendEventScoreIntel(player);
-        doEventScoreIntel(player);
-        GameServer.syncTimer = 1;
+        <argument kind="STRING">global.mybotMode += 1
+if global.mybotMode &gt;= 2
+{
+    global.mybotMode = 0
+}
 
-        if player.object_index == BotPlayer
-        {
-            with player BotInit()
-        }
-        if player.object_index == MyPlayer
-        {
-            with player MyBotInit()
-        }
-    }
+if global.mybotMode == 0
+{
+    value[1] = "Red Team"
+}
+else
+{
+    value[1] = "Blue Team"
 }
 </argument>
       </arguments>

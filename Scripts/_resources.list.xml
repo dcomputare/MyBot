@@ -45,5 +45,6 @@
   <resource name="calculateHealingFactor" type="RESOURCE"/>
   <resource name="ds_list_sorted_insert" type="RESOURCE"/>
   <resource name="toggleZoom" type="RESOURCE"/>
+  <resource name="MyBot" type="GROUP"/>
   <resource name="Bot" type="GROUP"/>
 </resources>

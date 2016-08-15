@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<event category="COLLISION" with="IntelligenceBaseBlue">
+<event category="STEP" id="0">
   <actions>
     <action id="603" library="1">
       <!--action name: Code-->
@@ -13,22 +13,23 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">if(global.isHost) {
-    if(team == TEAM_BLUE and intel == true) {
-        sendEventScoreIntel(player);
-        doEventScoreIntel(player);
-        GameServer.syncTimer = 1;
+        <argument kind="STRING">if editing == 0
+{
+    value[0] = real(keyboard_string)
+}
 
-        if player.object_index == BotPlayer
-        {
-            with player BotInit()
-        }
-        if player.object_index == MyPlayer
-        {
-            with player MyBotInit()
+if canClick == true &amp;&amp; editing == -1 &amp;&amp; mouse_x &gt; xbegin and mouse_x &lt; xbegin+width {
+    virtualitem = round((mouse_y-ybegin)/spacing);
+    if(mouse_check_button_pressed(mb_left)){
+        if(virtualitem &gt;= 0 and virtualitem &lt; items) {
+            keyboard_string="";
+            event_user(virtualitem);
         }
     }
+} else {
+    virtualitem = -1;
 }
+
 </argument>
       </arguments>
     </action>

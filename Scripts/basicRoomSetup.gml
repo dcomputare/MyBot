@@ -31,7 +31,10 @@ with(BotPlayer) {
     canSpawn = 1;
     humiliated = 0;
 }
-
+with(MyPlayer) {
+    canSpawn = 1;
+    humiliated = 0;
+}
 if instance_exists(IntelligenceBaseBlue) || instance_exists(IntelligenceBaseRed) || instance_exists(IntelligenceRed) || instance_exists(IntelligenceBlue) instance_create(0,0,ScorePanel);
 else if instance_exists(GeneratorBlue) || instance_exists(GeneratorRed) {
     instance_create(0,0,GeneratorHUD);

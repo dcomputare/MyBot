@@ -26,6 +26,7 @@
     global.CustomMapCollisionSprite = -1;
     
     global.botNameCounter = 1
+    global.mybotNameCounter = 1
     global.changedNodeMap = 0
     
     window_set_region_scale(-1, false);
@@ -79,7 +80,18 @@
     global.botClasses[CLASS_ENGINEER] = ini_read_real("Bots", "Constructors enabled", 1)
     global.botClasses[CLASS_SNIPER] = ini_read_real("Bots", "Riflemen enabled", 1)   
     global.botDebugMode = ini_read_real("Bots", "Debug Mode enabled", 0)
- 
+    // MyBots
+    global.mybotNumber = ini_read_real("MyBots", "Number (in total)", 0)
+    global.mybotMode = ini_read_real("MyBots", "Team", 0)
+    global.mybotNamePrefix = ini_read_string("MyBots", "Bot Name Prefix", "")
+    global.mybotLearningMode = ini_read_real("MyBots", "Reinforcement learning", 1)
+    global.mybotClasses[CLASS_SCOUT] = ini_read_real("MyBots", "Runners enabled", 1)
+    global.mybotClasses[CLASS_PYRO] = ini_read_real("MyBots", "Firebugs enabled", 1)
+    global.mybotClasses[CLASS_SOLDIER] = ini_read_real("MyBots", "Rocketmen enabled", 1)
+    global.mybotClasses[CLASS_HEAVY] = ini_read_real("MyBots", "Overweights enabled", 1)
+    global.mybotClasses[CLASS_MEDIC] = ini_read_real("MyBots", "Healers enabled", 1)
+    global.mybotClasses[CLASS_ENGINEER] = ini_read_real("MyBots", "Constructors enabled", 1)
+    global.mybotClasses[CLASS_SNIPER] = ini_read_real("MyBots", "Riflemen enabled", 1)   
     
     global.mapdownloadLimitBps = ini_read_real("Server", "Total bandwidth limit for map downloads in bytes per second", 50000);
     global.currentMapArea=1;
