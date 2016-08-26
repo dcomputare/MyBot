@@ -398,4 +398,5 @@ global.launchMap = "";
         AudioControlToggleMute();
         room_goto_fix(Menu);
     }    
+    global.move =0;
 }

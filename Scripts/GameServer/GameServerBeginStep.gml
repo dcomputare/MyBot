@@ -47,7 +47,28 @@ for(i=0; i<ds_list_size(global.players); i+=1)
         }
         continue
     }
-    
+    if player.object_index == MyPlayer
+    {
+        if player.destroy
+        {
+            removePlayer(player);
+            ServerPlayerLeave(i);        
+            i-=1;
+        }
+        else if player.object != -1
+        {
+            with player
+            {
+                getMyBotInput()
+
+                with object
+                {
+                    event_user(1)
+                }
+            }
+        }
+        continue
+    }
     if(socket_has_error(player.socket))
     {
         if global.botMode == 2 and player.team != TEAM_SPECTATOR
@@ -240,7 +261,10 @@ for(i=1; i<ds_list_size(global.players); i+=1)
     {
         continue;
     }
-
+    if player.object_index == MyPlayer
+    {
+        continue;
+    }
     write_buffer(player.socket, global.eventBuffer);
     write_buffer(player.socket, global.sendBuffer);
     socket_send(player.socket);

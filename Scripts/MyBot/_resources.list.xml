@@ -4,4 +4,6 @@
   <resource name="CreateMyBot" type="RESOURCE"/>
   <resource name="GetMyBotTeam" type="RESOURCE"/>
   <resource name="GetMyBotClass" type="RESOURCE"/>
+  <resource name="getMyBotInput" type="RESOURCE"/>
+  <resource name="readfile" type="RESOURCE"/>
 </resources>
